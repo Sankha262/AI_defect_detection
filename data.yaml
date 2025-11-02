@@ -1,0 +1,17 @@
+names:
+- crazing
+- inclusion
+- patches
+- pitted_surface
+- rolled_in_scale
+- scratches
+nc: 6
+roboflow:
+  license: Public Domain
+  project: metallic-surface-defect-detector
+  url: https://universe.roboflow.com/sujitsa/metallic-surface-defect-detector/dataset/1
+  version: 1
+  workspace: sujitsa
+test: ../test/images
+train: ../train/images
+val: ../valid/images
