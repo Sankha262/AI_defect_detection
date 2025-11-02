@@ -1,10 +1,12 @@
 ultralytics==8.2.45
 streamlit>=1.30.0
+torch==2.3.1
 opencv-python-headless==4.8.0.76
 pillow
 pandas
 numpy
 PyYAML
+
 
 
 
