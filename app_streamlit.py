@@ -24,7 +24,7 @@ def run_inference(model, img):
 st.title("🧠 Defective Product Detection System")
 st.markdown("### Upload an image to detect and analyze manufacturing defects.")
 
-weights_path = "runs/defect_yolov12n/weights/best.pt"
+weights_path = "best.pt"
 model = load_model(weights_path)
 
 # Sidebar
@@ -71,7 +71,7 @@ if uploaded_file is not None:
             # Model performance metrics
             try:
                 st.subheader("⚙️ Model Precision Metrics")
-                metrics = model.val(data="data/data.yaml")
+                metrics = model.val(data="data.yaml")
                 st.write(f"**mAP50:** {metrics.box.map50:.4f}")
                 st.write(f"**mAP50-95:** {metrics.box.map:.4f}")
                 st.write(f"**Precision:** {metrics.box.mp:.4f}")
@@ -81,3 +81,4 @@ if uploaded_file is not None:
 
 else:
     st.info("👆 Upload an image file to get started.")
+
